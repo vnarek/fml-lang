@@ -1,0 +1,111 @@
+// Here, I will write all my secrets!
+
+/* in Naniwa Bay, 
+   now the flowers are blossoming. 
+   after lying dormant all winter, 
+   now the spring has come 
+   and the flowers are blossoming. */
+
+// 👍 
+
+-1;
+42;
+
+5 + 7;   //    12
+5 - 7;   //    -2
+5 * 7;   //    35
+5 / 7;   //     0
+5 % 7;   //     5
+5 <= 7;   //  true
+5 >= 7;   // false
+5 < 7;   //  true
+5 > 7;   // false
+5 == 7;   // false
+5 != 7;   //  true
+
+true;
+false;
+
+true  & false;   // false
+true | false;   //  true
+true == false;   // false
+true != false;   //  true
+
+null;
+
+print("ahoj przygodo!\n");
+print("~ and ~ and ~ and ~\n", 1, 2, 3, 4);
+
+let answer = 42;
+let butts = null;
+
+begin
+  let x = 1;
+  let y = 2;
+  print("~ ~\n", x, y)
+end;
+
+if true 
+then print("true")
+else print("false");
+
+if true
+then begin
+  print("true");
+  print("true");
+end
+else begin
+  print("false");
+  print("false");
+end;
+
+while false 
+do print("forever\n");
+
+let i = 0;
+while i < 10 
+do begin
+  print("~\n", i);
+  i <- i + 1;
+end;
+
+function f(x,y) -> 2 * x + y;
+
+let arr = array(let size = 7, null);
+
+
+object /* optional inheritence declaration goes here */
+begin 
+  /* optional members go here */
+end;
+
+function new() -> object begin end;
+
+let point = object 
+begin
+  let x = 0;
+  let y = 1;
+  let z = 2;
+end;
+
+let point = object 
+begin
+  let x = 0;
+  let y = 1;
+  let z = 2;
+  function print() -> 
+  begin
+    print("x=~, y=~, z=~\n", this.x, this.y, this.z);
+  end
+end;
+
+function new(x) ->
+  object 
+  begin
+    let inner = 2;
+    function + (operand) -> this.inner + operand.inner
+  end;
+
+let pseudo_one = object extends 1 begin end;
+let pseudo_two = object extends 2 begin end;
+print("~\n", 1 + 2);

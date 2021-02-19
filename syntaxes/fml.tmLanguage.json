@@ -1,0 +1,103 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "FML",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#literals"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.fml",
+					"match": "\\b(begin|do|else|end|extends|function|if|let|then|while|array|object|this)\\b"
+				},
+				{
+					"match": "(==|!=|<=|>=|>|<|<-|->|get|set|print)",
+					"name": "keyword.operator.fml"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.fml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fml",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.block.fml",
+					"begin": "(\\/\\*)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.fml"
+						}
+					},
+					"end": "(\\*\\/)",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.fml"
+						}
+					}
+				},
+				{
+					"name": "comment.line.double-slash.fml",
+					"begin": "(\\/\\/)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.fml"
+						}
+					},
+					"end": "(?:\\n|$)"
+				}
+			]
+		},
+		"literals": {
+			"patterns": [
+				{
+					"match": "\\b(true|false|null)\\b",
+					"name": "constant.language.fml"
+				},
+				{
+					"match": "[-]?[0-9]+",
+					"name": "constant.numeric.integer.fml"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"match": "[_A-Za-z][_A-Za-z0-9]*",
+					"name": "variable.parameter"
+				},
+				{
+					"match": "this",
+					"name": "variable.language"
+				}
+			]
+		}
+	},
+	"scopeName": "source.fml"
+}
