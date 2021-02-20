@@ -109,3 +109,7 @@ function new(x) ->
 let pseudo_one = object extends 1 begin end;
 let pseudo_two = object extends 2 begin end;
 print("~\n", 1 + 2);
+
+function set_() -> 0
+function get_() -> 0
+function print_() -> 0

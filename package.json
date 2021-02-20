@@ -2,7 +2,11 @@
     "name": "fml-lang",
     "displayName": "fml-lang",
     "description": "Syntax highlighting for FML language",
-    "version": "0.0.1",
+    "version": "0.0.2",
+    "publisher": "vnarek",
+    "repository": {
+        "url": "https://github.com/vnarek/fml-lang"
+    },
     "engines": {
         "vscode": "^1.53.0"
     },
@@ -10,16 +14,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "fml",
-            "aliases": ["FML", "fml"],
-            "extensions": [".fml"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "fml",
-            "scopeName": "source.fml",
-            "path": "./syntaxes/fml.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "fml",
+                "aliases": [
+                    "FML",
+                    "fml"
+                ],
+                "extensions": [
+                    ".fml"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "fml",
+                "scopeName": "source.fml",
+                "path": "./syntaxes/fml.tmLanguage.json"
+            }
+        ]
     }
 }

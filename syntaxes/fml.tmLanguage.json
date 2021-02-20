@@ -29,7 +29,7 @@
 					"match": "\\b(begin|do|else|end|extends|function|if|let|then|while|array|object|this)\\b"
 				},
 				{
-					"match": "(==|!=|<=|>=|>|<|<-|->|get|set|print)",
+					"match": "\\b(==|!=|<=|>=|>|<|<-|->|get|set|print)\\b",
 					"name": "keyword.operator.fml"
 				}
 			]
